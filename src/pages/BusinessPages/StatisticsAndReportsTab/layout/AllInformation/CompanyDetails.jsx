@@ -1,21 +1,23 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import MultiProgress from "react-multi-progress";
 import { ImageContainer } from "../../../../../assets/img/IMG";
 import { sampleChartColors } from "../../../../baghShahiRanck/configs/sampleChartData";
+import { companyDetails, companyDetails2 } from "../../../../../constants/NavItemsConstants";
 
 export default function index() {
   return (
     <div className="">
-      <div className=" grid grid-cols-2 gap-y-7 gap-x-10">
-        {[0, 1, 2, 3].map((item) => (
+      <div className=" grid grid-cols-2 gap-y-7 gap-x-10 mx-5">
+        {companyDetails.map((item) => (
           <div className=" inline-block text-right w-full bg-white pt-2 pb-5 px-5 rounded-lg">
             <div className=" flex justify-between items-center">
               <div className="flex justify-center items-center">
-                <img src={ImageContainer.redTriangle} alt="ico" />
-                <span className=" mr-2">مشکلات با الویت بالا</span>
+                <img src={item.icon} alt="ico" />
+                <span className=" mr-2">{item.titel}</span>
               </div>
               <span className="bg-sectionDisable text-orgWhite  rounded-xl px-4">
-                2 مورد
+                {item.number} مورد
               </span>
             </div>
             <div className=" mt-7">
@@ -34,7 +36,7 @@ export default function index() {
                   {
                     actual: 65,
                     value: 65,
-                    color: "#10CCAE",
+                    color: `${item.progressColor}`,
                     showPercentage: false,
                     fontSize: 9,
                     isBold: false,
@@ -71,35 +73,12 @@ export default function index() {
           </div>
         ))}
       </div>
-      <div className="w-full flex justify-around items-center flex-row-reverse bg-red rounded-lg py-1 bg-white">
+      <div className="w-full flex justify-around items-center flex-row-reverse rounded-lg py-1 bg-white mx-5 mt-5">
+      {companyDetails2.map((item) => (
         <div className="flex justify-center items-center">
-          <img
-            src={ImageContainer.whiteLockIco}
-            className="bg-sectionDisable rounded p-3"
-          />
-          <span className=" text-title text-sm pr-4">امن</span>
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src={ImageContainer.whiteSourceIcoIco}
-            className="bg-sectionDisable rounded p-3"
-          />
-          <span className=" text-title text-sm pr-4">64 منبع</span>
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src={ImageContainer.whiteScalesOfJusticeIco}
-            className="bg-sectionDisable rounded p-3"
-          />
-          <span className=" text-title text-sm pr-4">38.72 کیلوبایت</span>
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src={ImageContainer.whiteSpeedIco}
-            className="bg-sectionDisable rounded p-3"
-          />
-          <span className=" text-title text-sm pr-4">1.67 ثانیه</span>
-        </div>
+          <img src={item.img} className="bg-sectionDisable rounded p-3"/>
+          <span className=" text-title text-sm pr-4">{item.title}</span>
+        </div>))}
       </div>
       <div className="px-5 w-full">
       <hr className="w-full border-border mt-8" />
