@@ -7,24 +7,44 @@ export default function index() {
     datasets: [
       {
         label: "# of Votes",
-        data: [0, 1],
-        cutout: 55,
-        backgroundColor: ["#D9D9D9", "#10CCAE"],
+        data: [10, 90],
+        cutout: 60,
+        backgroundColor: ["rgba(255, 255, 255, 0.2)", "#10CCAE"],
         borderWidth: 0,
         borderRadius: 5,
+
       },
     ],
   };
 
+  const textCenter = {
+    id: 'textCenter',
+    beforeDatasetsDraw(chart) {
+      const { ctx } = chart;
+
+      ctx.save();
+      ctx.font = 'bolder 36px sans-serif';
+      ctx.fillStyle = '#10CCAE';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(miniChartSetting2.datasets[0].data[1], chart.getDatasetMeta(0).data[0].x,chart.getDatasetMeta(0).data[0].y)
+    
+    }
+  }
+
   return (
-    <div className="flex justify-between relative h-40">
-      <div className=" w-40">
+    <div className="flex justify-between h-40">
+       <div className="h-full flex flex-col relative">
+      <div className="w-40"> 
         <Doughnut
           data={miniChartSetting2}
           options={{ maintainAspectRatio: false }}
+          plugins={[textCenter]}
         />
       </div>
-      <div className="h-full flex flex-col justify-between items-start mr-9">
+      <div className="relative" style={{bottom:139,minHeight:138,width:140,backgroundColor:'rgba(16, 204, 174, 0.2)',right:10, borderRadius:100}}></div>
+      </div>
+      <div className="h-full flex flex-col justify-between items-start mx-4 pr-2">
 
       <p className=" text-lg text-title">شرکت زانکو نویان Xaankoo Noyan</p>
       <p className="text-gray text-sm text-right">
@@ -36,8 +56,8 @@ export default function index() {
       </a>
       </div>
       {/* <RotateLine/> */}
-      <div className=" border border-border h-full mx-7"></div>
-      <div className=" flex-grow h-full border border-border min-w-[265px]">
+      <div className=" border border-border h-full mx-1"></div>
+      <div className=" flex-grow h-full border border-border mx-4 ">
 
       </div>
     </div>
