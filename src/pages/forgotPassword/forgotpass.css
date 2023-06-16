@@ -1,0 +1,12 @@
+.ErrorBadgeBox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #C42B1C;
+   margin: 0px 10px;
+   top: 35px;
+   position: absolute;
+   display: none;
+  }
+ 
+

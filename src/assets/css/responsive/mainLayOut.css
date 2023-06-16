@@ -1,0 +1,44 @@
+@media only screen and (max-height: 750px) {
+    #main-header_layOut {
+        height: 53px !important;
+    }
+    #main-body_container_layOut{
+        margin-top: 1vh;
+        height: 94vh;
+    }
+
+    /* section page title */
+    #Map-Utils-Page_titile{
+        height: 5%;
+    }
+}
+
+@media only screen and (min-height: 1050px) {
+    #main-header_layOut {
+        height: 5vh;
+    }
+    #main-body_container_layOut{
+        margin-top: 1vh;
+        height: 94vh;
+    }
+
+    /* section page title */
+    #Map-Utils-Page_titile{
+        height: 5%;
+    }
+}
+@media only screen and (min-height: 750px) {
+    #main-header_layOut {
+        height: 7vh;
+    }
+    #main-body_container_layOut{
+        margin-top: 1vh;
+        height: 91vh;
+    }
+
+
+    /* section page title */
+    #Map-Utils-Page_titile{
+        height: 7%;
+    }
+}
