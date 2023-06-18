@@ -8,8 +8,7 @@ export default function index() {
     <div className=' px-5'>
         <p className='text-title text-sm py-4 text-right'>معیار های سرعت صفحه</p>
         <div className=' grid grid-cols-2 gap-x-20 px-3'>
-            {speedInformation.map(item=>(
-
+            {speedInformation.map(item => (
             <div className='flex justify-between items-center py-7 border-y border-border'>
                 <div className='flex justify-center items-center'>
                     <img src={item.img} alt="square"/>

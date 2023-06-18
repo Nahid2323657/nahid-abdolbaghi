@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TitleButton from "./layout/TitleButton";
 import AllInformation from "./layout/AllInformation";
-import TechnicalAnalysis from "./layout/TechnicalAnalysis";
+import TechnicalAnalysis from "./layout/TechnicalAnalysis/TechnicalAnalysis";
 import ChartKeyWordRank from "./layout/ChartKeywordRank";
 import FilterTabel from "./layout/FIlterTabel";
 import Table from "./layout/Table";

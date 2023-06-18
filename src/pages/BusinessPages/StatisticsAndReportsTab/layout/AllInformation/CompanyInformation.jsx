@@ -1,6 +1,5 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import RotateLine from "../../../../../component/shared/rotateLine";
 
 export default function index() {
   const miniChartSetting2 = {
