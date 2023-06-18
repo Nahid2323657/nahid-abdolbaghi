@@ -3,6 +3,8 @@ import { Doughnut } from "react-chartjs-2";
 import { chartsData } from "../../../../../constants/NavItemsConstants";
 
 export default function index() {
+
+  console.log(chartsData[2]?.text)
   return (
     <div className="w-full flex justify-around flex-row-reverse items-center ">
         {chartsData.map((item) => (

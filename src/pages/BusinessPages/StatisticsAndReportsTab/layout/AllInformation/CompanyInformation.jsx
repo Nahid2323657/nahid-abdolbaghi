@@ -30,7 +30,7 @@ export default function index() {
     
     }
   }
-
+  console.log({textCenter})
   return (
     <div className="flex justify-between h-40">
        <div className="h-full flex flex-col relative">

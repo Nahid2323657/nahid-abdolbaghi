@@ -111,71 +111,79 @@ export const miniChartSetting4 = {
   ],
 };
 export const textCenter1 = {
-  id: "textCenter1",
-  beforeDatasetsDraw(chart) {
-    const { ctx } = chart;
+  textCenter: {
+    id: "textCenter",
+    beforeDatasetsDraw(chart) {
+      const { ctx } = chart;
 
-    ctx.save();
-    ctx.font = "bolder 36px sans-serif";
-    ctx.fillStyle = "red";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(
-      miniChartSetting1.datasets[0].data[1],
-      chart.getDatasetMeta(0).data[0].x,
-      chart.getDatasetMeta(0).data[0].y
-    );
+      ctx.save();
+      ctx.font = "bolder 36px sans-serif";
+      ctx.fillStyle = "red";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(
+        miniChartSetting1.datasets[0].data[1],
+        chart.getDatasetMeta(0).data[0].x,
+        chart.getDatasetMeta(0).data[0].y
+      );
+    },
   },
 };
 export const textCenter2 = {
-  id: "textCenter2",
-  beforeDatasetsDraw(chart) {
-    const { ctx } = chart;
+  textCenter: {
+    id: "textCenter",
+    beforeDatasetsDraw(chart) {
+      const { ctx } = chart;
 
-    ctx.save();
-    ctx.font = "bolder 36px sans-serif";
-    ctx.fillStyle = "#10CCAE";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(
-      miniChartSetting2.datasets[0].data[1],
-      chart.getDatasetMeta(0).data[0].x,
-      chart.getDatasetMeta(0).data[0].y
-    );
+      ctx.save();
+      ctx.font = "bolder 36px sans-serif";
+      ctx.fillStyle = "#10CCAE";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(
+        miniChartSetting2.datasets[0].data[1],
+        chart.getDatasetMeta(0).data[0].x,
+        chart.getDatasetMeta(0).data[0].y
+      );
+    },
   },
 };
 export const textCenter3 = {
-  id: "textCenter3",
-  beforeDatasetsDraw(chart) {
-    const { ctx } = chart;
+  textCenter: {
+    id: "textCenter",
+    beforeDatasetsDraw(chart) {
+      const { ctx } = chart;
 
-    ctx.save();
-    ctx.font = "bolder 36px sans-serif";
-    ctx.fillStyle = "#10CCAE";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(
-      miniChartSetting3.datasets[0].data[1],
-      chart.getDatasetMeta(0).data[0].x,
-      chart.getDatasetMeta(0).data[0].y
-    );
+      ctx.save();
+      ctx.font = "bolder 36px sans-serif";
+      ctx.fillStyle = "#10CCAE";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(
+        miniChartSetting3.datasets[0].data[1],
+        chart.getDatasetMeta(0).data[0].x,
+        chart.getDatasetMeta(0).data[0].y
+      );
+    },
   },
 };
 export const textCenter4 = {
-  id: "textCenter4",
-  beforeDatasetsDraw(chart) {
-    const { ctx } = chart;
+  textCenter: {
+    id: "textCenter",
+    beforeDatasetsDraw(chart) {
+      const { ctx } = chart;
 
-    ctx.save();
-    ctx.font = "bolder 36px sans-serif";
-    ctx.fillStyle = "#10CCAE";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(
-      miniChartSetting4.datasets[0].data[1],
-      chart.getDatasetMeta(0).data[0].x,
-      chart.getDatasetMeta(0).data[0].y
-    );
+      ctx.save();
+      ctx.font = "bolder 36px sans-serif";
+      ctx.fillStyle = "#10CCAE";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(
+        miniChartSetting4.datasets[0].data[1],
+        chart.getDatasetMeta(0).data[0].x,
+        chart.getDatasetMeta(0).data[0].y
+      );
+    },
   },
 };
 
@@ -202,7 +210,7 @@ export const chartsData = [
     data: miniChartSetting4,
     titel: "عملکرد اجرایی",
     backgroundColor: "rgba(243, 82, 66, 0.2)",
-    test: textCenter4,
+    test: textCenter3,
   },
 ];
 
